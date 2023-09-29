@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="../bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="../img/js.png" sizes="32x32" type="image/png" />
+    <title>Registro Estudiantes</title>
+</head>
+
+<body>
+    <header>
+        <div class="px-3 py-2 text-bg-dark fixed-top">
+            <div class="container">
+                <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                    <a href="../index.html"
+                        class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+                        <img src="../img/js.png" alt="" width="32" height="32" class="me-2" />
+                    </a>
+
+                    <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small nav-bar">
+                        <li class="text-center">
+                            <a href="recursividad.html" class="nav-link text-white">
+                                <i class="bi bi-arrow-clockwise bi-2 d-block"></i>
+                                Recursividad
+                            </a>
+                        </li>
+                        <li class="text-center">
+                            <a href="tabla.html" class="nav-link text-white">
+                                <i class="bi bi-table bi-2 d-block"></i>
+                                Creando una Tabla
+                            </a>
+                        </li>
+                        <li class="text-center">
+                            <a href="formulario.html" class="nav-link text-white">
+                                <i class="bi bi-ui-checks bi-2 d-block"></i>
+                                Formulario
+                            </a>
+                        </li>
+                        <li class="text-center nav-bar-li-active">
+                            <a href="estudiante.html" class="nav-link text-white">
+                                <i class="bi bi-file-person bi-2 d-block"></i>
+                                Estudiante
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-12 shadow-lg p-3 mt-5 bg-body rounded"> 
+                <center><h3>Agregando Estudiante</h3></center>
+                <form id="idForm">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-floating mb-3 col-lg-3">
+                                <input type="text" class="form-control" id="idTxtCarnet" placeholder="Carnet"/>
+                                <label for="idTxtCarnet">
+                                    <i class="fa-regular fa-id-card"></i> Carnet
+                                </label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="idTxtNombreCompleto" placeholder="Nombre del Estudiante" />
+                                <label for="idTxtNombreCompleto">
+                                    <i class="bi bi-person-circle"></i> Nombre / Apellido
+                                </label>
+                            </div>
+                            <div class="row">
+                                <div class="form-floating mb-3 col-lg-4">
+                                    <input type="text" class="form-control" id="idTxtDui" placeholder="DUI"/>
+                                    <label for="idTxtDui">
+                                        <i class="fa-sharp fa-solid fa-address-card" style="margin-left: 5px;"></i> DUI
+                                    </label>
+                                </div>
+                                <div class="form-floating mb-3 col-lg-5">
+                                    <input type="text" class="form-control" id="idTxtNit" placeholder="NIT"/>
+                                    <label for="idTxtNit">
+                                        <i class="fa-sharp fa-regular fa-address-card" style="margin-left: 5px;"></i> NIT
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="date" class="form-control" id="idTxtFechaNacimiento" placeholder="Fecha de nacimiento"> 
+                                <label for="idTxtFechaNacimiento">
+                                <i class="bi bi-calendar-date"></i> Fecha de Nacimiento
+                                </label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="idTxtCorreo" placeholder="Correo Electronico" />
+                                <label for="idTxtCorreo">
+                                    <i class="fa-solid fa-at"></i> Correo Electronico
+                                </label>
+                            </div>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="idTxtEdad" placeholder="Edad" />
+                                <label for="idTxtEdad">
+                                    <i class="bi bi-123"></i> Edad
+                                </label>
+                            </div>
+                            <div class="row"> 
+                                <div class="col-lg-12 pt-3">
+                                    <button id="idBtnAgregar" type="button" class="btn btn-success"> 
+                                        <i class="bi bi-person-plus-fill"></i> Guardar Estudiante
+                                    </button>
+                                    <button id="idBtnMostrar" type="button" class="btn btn-warning"> 
+                                        <i class="bi bi-people"></i> Mostrar Estudiantes
+                                    </button>
+                                </div>
+                            </div>
+                        </div> 
+                        <div class="col-lg-6">
+                            <!-- Agregar una imagen a la derecha de los campos del formulario -->
+                            <center><img src="../img/Estudiantesinfondo.png" alt="Imagen" class="ms-3" width="500" height="500"></center>
+                        </div>                       
+                    </div>
+                </form>
+            </div>
+            <div class="col-12 shadow-1g p-3 mt-5 bg-body rounded"> 
+                <h3>Estudiantes registrados</h3>
+                <div id="idTablaEstudiante">
+                Ninguno
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<!-- PERMITE MOSTRAR NOTIFICACIONES -->
+<div class="toast-container top-0 start-50 translate-middle-x pt-4 mt-1" style="z-index: 1035;"> 
+    <div id="idNotificacion" class="toast text-bg-success" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <i class="bi bi-bell"></i>
+            <strong class="me-auto">Notificacion</strong>
+            <small>Hace un momento</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="idMensaje">
+        </div>
+    </div>
+</div>
+<div class="toast-container top-0 start-50 translate-middle-x pt-4 mt-1" style="z-index: 1035;"> 
+    <div id="idNotificacionError" class="toast text-bg-danger text-white" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <i class="bi bi-bell"></i>
+            <strong class="me-auto">Notificacion</strong>
+            <small>Hace un momento</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body" id="idMensajeError">
+        </div>
+    </div>
+</div>
+
+    <script src="../bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/estudiante.js" defer></script>
+</body>
+
+</html>
